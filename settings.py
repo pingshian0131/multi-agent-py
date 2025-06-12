@@ -19,18 +19,18 @@ class Settings(BaseSettings):
     # --- Model Name for each provider ---
     # You can set which specific model each provider should use.
     MODEL_OPENAI: str = "gpt-4o"
-    MODEL_GOOGLE: str = "gemini-1.5-pro-latest"
-    MODEL_ANTHROPIC: str = "claude-3-5-haiku-20241022"
+    MODEL_GOOGLE: str = "gemini-2.0-flash"
+    MODEL_ANTHROPIC: str = "claude-3-7-sonnet-20250219"
 
     # --- Assign a provider to each role ---
     # This is where you control which agent gets which AI.
-    ROLE_ARCHITECT: Provider = "anthropic"
+    ROLE_ARCHITECT: Provider = "anthropic"  # anthropic
     ROLE_DEVELOPER: Provider = "google"
     ROLE_TESTER: Provider = "openai"
     # ### <<< END: MODULAR CONFIGURATION >>>
 
     # --- Project Configuration
-    PROJECT_BASE_PATH: str = "~/project/dynamic_agent_demo"
+    PROJECT_BASE_PATH: str = "~/project/todo_list_fastapi_demo2"
     
     class Config:
         extra = 'ignore'
