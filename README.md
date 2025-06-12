@@ -1,5 +1,7 @@
 # AI Software Development Crew 🤖
 
+[Demo](https://github.com/pingshian0131/multi-agent-demo-fastapi)
+
 This project demonstrates how to use a crew of autonomous AI agents, orchestrated by CrewAI, to automatically plan, develop, and test a complete FastAPI web application from a single high-level goal.
 
 The crew consists of specialized agents, each powered by a different large language model (LLM), that collaborate to build and validate the software in a process that mirrors a real-world development team.
