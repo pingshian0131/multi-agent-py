@@ -2,3 +2,4 @@ crewai
 crewai-tools
 langchain-google-genai
 langchain-anthropic
+pydantic-settings
