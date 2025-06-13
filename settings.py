@@ -5,11 +5,13 @@ from typing import Literal
 # Define the allowed provider names. This ensures type safety.
 Provider = Literal["openai", "google", "anthropic"]
 
+
 class Settings(BaseSettings):
     """
     Manages application settings and secrets by reading from system environment variables.
     Allows for dynamic assignment of AI providers to different agent roles.
     """
+
     # --- API Keys
     OPENAI_API_KEY: str = Field(..., repr=False)
     GOOGLE_API_KEY: str = Field(..., repr=False)
@@ -31,8 +33,6 @@ class Settings(BaseSettings):
 
     # --- Project Configuration
     PROJECT_BASE_PATH: str = "~/project/todo_list_fastapi_demo2"
-    
+
     class Config:
-        extra = 'ignore'
-
-
+        extra = "ignore"
