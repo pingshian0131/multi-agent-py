@@ -234,6 +234,7 @@ project_crew = Crew(
     agents=[architect_agent, developer_agent, qa_agent],
     tasks=[planning_task, development_and_testing_task],
     process=Process.sequential,
+    output_log_file=True,
     # ### <<< START: FIX FOR THE VALIDATION ERROR >>>
     # The `verbose` parameter now requires a boolean. `True` enables detailed logging.
     verbose=True,
@@ -243,6 +244,7 @@ project_crew = Crew(
 try:
     print(f"🚀 Kicking off the dynamically configured 3-agent crew...")
     result = project_crew.kickoff()
+    print(f"Token Usage: {crew_output.token_usage}")
     print("\n\n########################")
     print("## Crew Finished Execution!")
     print("########################\n")
